@@ -36,20 +36,23 @@ class MainPresenterTest: XCTestCase {
         person = nil
         presenter = nil
     }
-//    override func setUpWithError() throws {
-//        // Put setup code here. This method is called before the invocation of each test method in the class.
-//    }
-//
-//    override func tearDownWithError() throws {
-//        // Put teardown code here. This method is called after the invocation of each test method in the class.
-//    }
+
 
     func testModuleIsNotNil() {
         
         XCTAssertNotNil(view, "view is not nil")
-        
+        XCTAssertNotNil(person, "model person is not nil")
+        XCTAssertNotNil(presenter, "presenter is not nil")
     }
 
+    func testView() {
+        presenter.showGreeting()
+        XCTAssertEqual(view.titleTest, "Baz Bar")
+    }
     
+    func testPersonModel() {
+        XCTAssertEqual(person.firstName, "Baz")
+        XCTAssertEqual(person.lastName, "Bar")
+    }
 
 }
