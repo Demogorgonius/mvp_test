@@ -19,6 +19,7 @@
 		A58F05E824881E09006BDE56 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05E724881E09006BDE56 /* MainPresenter.swift */; };
 		A58F05EE24882489006BDE56 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58F05ED24882489006BDE56 /* MainViewController.xib */; };
 		A58F05F0248825A8006BDE56 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05EF248825A8006BDE56 /* ModuleBuilder.swift */; };
+		A58F05F524882A4C006BDE56 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05F424882A4C006BDE56 /* MainPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		A58F05E724881E09006BDE56 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		A58F05ED24882489006BDE56 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A58F05EF248825A8006BDE56 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		A58F05F424882A4C006BDE56 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				A58F05DA24881CED006BDE56 /* mvp_testTests.swift */,
+				A58F05F3248829F9006BDE56 /* TestMainModule */,
 				A58F05DC24881CED006BDE56 /* Info.plist */,
 			);
 			path = mvp_testTests;
@@ -144,6 +147,14 @@
 				A58F05E724881E09006BDE56 /* MainPresenter.swift */,
 			);
 			path = Presentor;
+			sourceTree = "<group>";
+		};
+		A58F05F3248829F9006BDE56 /* TestMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				A58F05F424882A4C006BDE56 /* MainPresenterTest.swift */,
+			);
+			path = TestMainModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58F05DB24881CED006BDE56 /* mvp_testTests.swift in Sources */,
+				A58F05F524882A4C006BDE56 /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
