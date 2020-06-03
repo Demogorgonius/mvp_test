@@ -16,6 +16,7 @@
 		A58F05D024881CEC006BDE56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A58F05CE24881CEC006BDE56 /* LaunchScreen.storyboard */; };
 		A58F05DB24881CED006BDE56 /* mvp_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05DA24881CED006BDE56 /* mvp_testTests.swift */; };
 		A58F05E624881D84006BDE56 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05E524881D84006BDE56 /* Person.swift */; };
+		A58F05E824881E09006BDE56 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05E724881E09006BDE56 /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		A58F05DA24881CED006BDE56 /* mvp_testTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mvp_testTests.swift; sourceTree = "<group>"; };
 		A58F05DC24881CED006BDE56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A58F05E524881D84006BDE56 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		A58F05E724881E09006BDE56 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				A58F05C224881CEA006BDE56 /* SceneDelegate.swift */,
 				A58F05C424881CEA006BDE56 /* ViewController.swift */,
 				A58F05E524881D84006BDE56 /* Person.swift */,
+				A58F05E724881E09006BDE56 /* MainPresenter.swift */,
 				A58F05C624881CEA006BDE56 /* Main.storyboard */,
 				A58F05CC24881CEC006BDE56 /* Assets.xcassets */,
 				A58F05CE24881CEC006BDE56 /* LaunchScreen.storyboard */,
@@ -207,6 +210,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A58F05E624881D84006BDE56 /* Person.swift in Sources */,
+				A58F05E824881E09006BDE56 /* MainPresenter.swift in Sources */,
 				A58F05C524881CEA006BDE56 /* ViewController.swift in Sources */,
 				A58F05C124881CEA006BDE56 /* AppDelegate.swift in Sources */,
 				A58F05C324881CEA006BDE56 /* SceneDelegate.swift in Sources */,
