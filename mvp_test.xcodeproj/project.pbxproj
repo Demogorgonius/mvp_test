@@ -20,6 +20,7 @@
 		A58F05EE24882489006BDE56 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A58F05ED24882489006BDE56 /* MainViewController.xib */; };
 		A58F05F0248825A8006BDE56 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05EF248825A8006BDE56 /* ModuleBuilder.swift */; };
 		A58F05F524882A4C006BDE56 /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05F424882A4C006BDE56 /* MainPresenterTest.swift */; };
+		A58F05F72488FAB0006BDE56 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05F62488FAB0006BDE56 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		A58F05ED24882489006BDE56 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		A58F05EF248825A8006BDE56 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
 		A58F05F424882A4C006BDE56 /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		A58F05F62488FAB0006BDE56 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				A58F05C224881CEA006BDE56 /* SceneDelegate.swift */,
 				A58F05EF248825A8006BDE56 /* ModuleBuilder.swift */,
 				A58F05E9248823EF006BDE56 /* MainModule */,
+				A58F05F82488FAD8006BDE56 /* ServiceLayer */,
 				A58F05C624881CEA006BDE56 /* Main.storyboard */,
 				A58F05CC24881CEC006BDE56 /* Assets.xcassets */,
 				A58F05CE24881CEC006BDE56 /* LaunchScreen.storyboard */,
@@ -155,6 +158,14 @@
 				A58F05F424882A4C006BDE56 /* MainPresenterTest.swift */,
 			);
 			path = TestMainModule;
+			sourceTree = "<group>";
+		};
+		A58F05F82488FAD8006BDE56 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				A58F05F62488FAB0006BDE56 /* NetworkService.swift */,
+			);
+			path = ServiceLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			files = (
 				A58F05E624881D84006BDE56 /* Comment.swift in Sources */,
 				A58F05E824881E09006BDE56 /* MainPresenter.swift in Sources */,
+				A58F05F72488FAB0006BDE56 /* NetworkService.swift in Sources */,
 				A58F05C524881CEA006BDE56 /* MainViewController.swift in Sources */,
 				A58F05C124881CEA006BDE56 /* AppDelegate.swift in Sources */,
 				A58F05F0248825A8006BDE56 /* ModuleBuilder.swift in Sources */,
