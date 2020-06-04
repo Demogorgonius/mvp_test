@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A51334E124890FEE007E60CE /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51334E024890FEE007E60CE /* DetailPresenter.swift */; };
+		A51334EB248916B5007E60CE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51334E9248916B5007E60CE /* DetailViewController.swift */; };
+		A51334EC248916B5007E60CE /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A51334EA248916B5007E60CE /* DetailViewController.xib */; };
 		A58F05C124881CEA006BDE56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05C024881CEA006BDE56 /* AppDelegate.swift */; };
 		A58F05C324881CEA006BDE56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05C224881CEA006BDE56 /* SceneDelegate.swift */; };
 		A58F05C524881CEA006BDE56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58F05C424881CEA006BDE56 /* MainViewController.swift */; };
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A51334E024890FEE007E60CE /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		A51334E9248916B5007E60CE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A51334EA248916B5007E60CE /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		A58F05BD24881CEA006BDE56 /* mvp_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mvp_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A58F05C024881CEA006BDE56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A58F05C224881CEA006BDE56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +78,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A51334E224891418007E60CE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A51334E024890FEE007E60CE /* DetailPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A51334E324891422007E60CE /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				A51334E224891418007E60CE /* Presenter */,
+				A51334ED248916BB007E60CE /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		A51334ED248916BB007E60CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A51334E9248916B5007E60CE /* DetailViewController.swift */,
+				A51334EA248916B5007E60CE /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A58F05B424881CEA006BDE56 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +128,7 @@
 				A58F05C024881CEA006BDE56 /* AppDelegate.swift */,
 				A58F05C224881CEA006BDE56 /* SceneDelegate.swift */,
 				A58F05EF248825A8006BDE56 /* ModuleBuilder.swift */,
+				A51334E324891422007E60CE /* DetailModule */,
 				A58F05E9248823EF006BDE56 /* MainModule */,
 				A58F05F82488FAD8006BDE56 /* ServiceLayer */,
 				A58F05C624881CEA006BDE56 /* Main.storyboard */,
@@ -251,6 +284,7 @@
 			files = (
 				A58F05D024881CEC006BDE56 /* LaunchScreen.storyboard in Resources */,
 				A58F05CD24881CEC006BDE56 /* Assets.xcassets in Resources */,
+				A51334EC248916B5007E60CE /* DetailViewController.xib in Resources */,
 				A58F05C824881CEA006BDE56 /* Main.storyboard in Resources */,
 				A58F05EE24882489006BDE56 /* MainViewController.xib in Resources */,
 			);
@@ -272,10 +306,12 @@
 			files = (
 				A58F05E624881D84006BDE56 /* Comment.swift in Sources */,
 				A58F05E824881E09006BDE56 /* MainPresenter.swift in Sources */,
+				A51334E124890FEE007E60CE /* DetailPresenter.swift in Sources */,
 				A58F05F72488FAB0006BDE56 /* NetworkService.swift in Sources */,
 				A58F05C524881CEA006BDE56 /* MainViewController.swift in Sources */,
 				A58F05C124881CEA006BDE56 /* AppDelegate.swift in Sources */,
 				A58F05F0248825A8006BDE56 /* ModuleBuilder.swift in Sources */,
+				A51334EB248916B5007E60CE /* DetailViewController.swift in Sources */,
 				A58F05C324881CEA006BDE56 /* SceneDelegate.swift in Sources */,
 				A58F05CB24881CEA006BDE56 /* mvp_test.xcdatamodeld in Sources */,
 			);
