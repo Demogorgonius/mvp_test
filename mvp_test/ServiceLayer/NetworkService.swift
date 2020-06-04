@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 protocol NetworkServiceProtocol {
     func getComments(completion: @escaping (Result<[Comment]?, Error>) -> Void)

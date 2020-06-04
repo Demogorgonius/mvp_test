@@ -9,28 +9,31 @@
 import Foundation
 
 protocol MainViewProtocol: class {
-    func setGreeting(greeting: String)
+    func success()
+    func failure()
 }
 
 protocol MainViewPresenterProtocol: class {
-    init(view: MainViewProtocol, person: Person)
-    func showGreeting()
+    init(view: MainViewProtocol, networkService: NetworkServiceProtocol)
+    func getComments()
+    var comments: [Comment]? {get  set}
 }
 
 class MainPresenter: MainViewPresenterProtocol {
-   
-   let view: MainViewProtocol
-   let person: Person
-   
     
-    required init(view: MainViewProtocol, person: Person) {
+    weak var view: MainViewProtocol?
+    let networkService: NetworkServiceProtocol!
+    var comments: [Comment]?
+    
+    required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
-        self.person = person
+        self.networkService = networkService
+        
     }
     
-    func showGreeting() {
-        let greeting = self.person.firstName + " " + self.person.lastName
-        self.view.setGreeting(greeting: greeting)
+    func getComments() {
+        <#code#>
     }
-
+    
+    
 }
