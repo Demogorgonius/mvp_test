@@ -42,6 +42,12 @@ extension MainViewController: UITableViewDataSource {
     
 }
 
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let comment = presenter.comments?[indexPath.row]
+        presenter.tapOnTheComment(comment: comment)
+    }
+}
 
 extension MainViewController: MainViewProtocol {
     func success() {
