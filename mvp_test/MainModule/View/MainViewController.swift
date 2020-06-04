@@ -12,7 +12,8 @@ class MainViewController: UIViewController {
     
     // MARK: IBOutlet
     
-    @IBOutlet weak var greetingLabel: UILabel!
+    @IBOutlet weak var tableView: UITableView!
+    
     
     var presenter: MainViewPresenterProtocol!
     
@@ -20,20 +21,29 @@ class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
        
     }
 
-    // MARK: IBAction
-    @IBAction func didTapButtonAction(_ sender: Any) {
-        self.presenter.showGreeting()
+
+}
+extension MainViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = "test"
+        return cell
+    }
+    
+    
 }
-
 extension MainViewController: MainViewProtocol {
     
     func setGreeting(greeting: String) {
-        self.greetingLabel.text = greeting
+       
     }
     
 }
