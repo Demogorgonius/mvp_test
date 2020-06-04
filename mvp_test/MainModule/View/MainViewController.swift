@@ -29,12 +29,14 @@ class MainViewController: UIViewController {
 }
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return presenter.comments?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "test"
+        let comment = presenter.comments?[indexPath.row]
+        
+        cell.textLabel?.text = comment?.body
         return cell
     }
     
@@ -42,10 +44,15 @@ extension MainViewController: UITableViewDataSource {
 
 
 extension MainViewController: MainViewProtocol {
-    
-    func setGreeting(greeting: String) {
-       
+    func success() {
+        tableView.reloadData()
     }
     
+    func failure(error: Error) {
+        let alertNetwork = UIAlertController(title: "Network Error", message: error.localizedDescription, preferredStyle: .alert)
+        alertNetwork.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default Action"), style: .default, handler: nil))
+         self.present(alertNetwork, animated: true, completion: nil)
+    }
+   
 }
 

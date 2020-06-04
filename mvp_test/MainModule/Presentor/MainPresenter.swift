@@ -10,7 +10,7 @@ import Foundation
 
 protocol MainViewProtocol: class {
     func success()
-    func failure()
+    func failure(error: Error)
 }
 
 protocol MainViewPresenterProtocol: class {
@@ -28,11 +28,23 @@ class MainPresenter: MainViewPresenterProtocol {
     required init(view: MainViewProtocol, networkService: NetworkServiceProtocol) {
         self.view = view
         self.networkService = networkService
-        
+        getComments()
     }
     
     func getComments() {
-        <#code#>
+        networkService.getComments { [ weak self ] result in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let comments):
+                    self.comments = comments
+                    self.view?.success()
+                case .failure(let error):
+                    self.view?.failure(error: error)
+                }
+            }
+            
+        }
     }
     
     
